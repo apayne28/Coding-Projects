@@ -1,2 +1,6 @@
 # Coding-Projects
-Random projects I've done to get better at coding
+The TweetMe2 project I go back to from time to time.
+
+Tutorial here: https://www.youtube.com/watch?v=f1R_bykXHGE
+
+Current Progress: Step 20/110
