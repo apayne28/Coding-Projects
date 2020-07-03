@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- Name: Ashley Payne, Date: 3/26/2019-->
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="css/style.css"> 
+	<link rel="icon" href="favicon.ico">	
+	<title>Contact Us</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Contact Scoop's Ice Creamery">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<!-- Use the header area for the website name or logo -->
+	<header>
+		<a href="index.html"><img src="images/banner.png" alt="Scoop's Ice Creamery Banner"></a>
+	</header>
+	
+	<!-- Use the nav area to add hyperlinks to other pages within the website -->
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="aboutus.html">About Us</a></li>
+			<li><a href="sweettreats.html">Sweet Treats</a></li>
+					<li><a href="icecream.html">Ice Cream</a></li>
+					<li><a href="frozenyogurt.html">Frozen Yogurt</a></li>
+					<li><a href="monthlyspecial.html">Monthly Special</a></li>
+			<li><a href="locations.html">Locations</a></li>
+			<li><a href="contactus.html">Contact Us</a></li>
+		</ul>
+	</nav>
+	<div id="wrapper">
+
+	<h1> Fill out the form and we will get back to you as soon as possible</h1>
+	
+	<form method="post" action="feedback.php"><!-- Start Form -->
+		<label for="fName">*First Name:</label>
+		<input type="text" name="fName" id="fName" required="">
+	
+		<label for="lName">*Last Name:</label>
+		<input type="text" name="lName" id="lName" required="">
+		
+		<label for="email">*Email</label>
+		<input type="email" name="emal" id="email" required="" placeholder="johndoe@mail.com">
+		
+		<label for="phone">Phone:</label>
+		<input type="tel" id="phone" name="phone">
+		
+		<p> I would like more information about:</p>
+		<ul>
+			<li><input type="checkbox" name="ingred" id="ingred" value="ingred" class="chkbx">Ingredients</li>
+			<li><input type="checkbox" name="carop" id="carop" value="carop" class="chkbx">Career Opprotunities</li>
+			<li><input type="checkbox" name="nutr" id="nutr" value="nutr" class="chkbx">Nutrition</li>
+		</ul>
+		
+		<label for="reference">How did you hear about us?:</label>
+		<select name="reference" id="reference">
+			<option value="friend">Friends</option>
+			<option value="ads">Advertisements</option>
+			<option value="internet">Internet</option>
+			<option value="social">Social Media</option>
+			<option value="other">Other</option>
+		</select><br><br>
+		
+		<label for="questions">If you selected "Other" in the dropdown menu, type any other questions here!:</label><br>
+		<textarea id="questions" name="questions" rows="3" cols="25"></textarea><br>
+		
+		<input type="submit" id="submit" value="Submit" class="btn" onclick="tyAlert()">
+		<input type="reset" id="reset" value="Reset Form" class="btn">
+	</form>
+	
+	</div>
+<footer>
+	<p>&copy; Scoop's Ice Creamery<br>
+	Copyright 2019</p>
+</footer>
+</body>
+</html>

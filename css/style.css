@@ -1,0 +1,252 @@
+/* Ashley Payne's Website Project CSS */
+@import url('https://fonts.googleapis.com/css?family=Krub');
+body {
+	background-color: #C5FEEE;
+	margin: 0;
+	height: 100%;
+	font-family: 'Krub', sans-serif;
+	font-size: 16.5px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+#wrapper {
+	width: 100%;
+	margin: auto;
+	background-color: #FFF;
+}
+
+header {
+	text-align: center;
+}
+
+nav a {
+	text-decoration: none;
+	color: #FE6785;
+}
+
+
+nav li {
+	border-radius: 2em;
+	list-style-type: none;
+	margin: 0.3em;
+	margin-left:-2em;
+	padding: 0.7em;
+	text-align: center;
+	background-color: #81CFF5;
+}
+
+h1, h2, h3 {
+	text-align: center;
+	color: #B88C4B;
+	padding-top: 2em;
+}
+
+section {
+	margin: 0.3em;
+	padding: 2em;
+}
+
+section img {
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.treats {
+	text-align: center;
+}
+
+.treats img {
+border: solid 0.5em #81CFF5;
+height: 10em;
+width: 10em;	
+}
+
+#monthlyspecial {
+	margin: auto;
+	width: 90%;
+}
+
+aside {
+	display: none;
+}
+
+#contact figure img {
+	height: 20em;
+	width: 20em;
+	border: solid 0.5em #FE6785;
+}
+
+form {
+	display: block;
+	width: 90%;
+	margin: auto;
+	border: 2px solid black;
+	background-color: #81CFF5;
+}
+
+label {
+	display: block;
+	margin-left: 1em;
+}
+
+input, select, textarea {
+	display: inline-block;
+	margin-left: 1em;
+	margin-bottom: 1em;
+}
+
+form p {
+	margin-left: 1em;
+}
+
+form ul {
+	list-style-type: none;
+}
+
+footer {
+	display: block;
+	font-size: .70em;
+	text-align: center;
+	margin-top: -1.3em;
+	background-color: #FE8EA4;
+	padding: 1em;
+	clear:both;
+	
+}
+
+.desktop {
+	display: none;
+}
+
+@media only screen and (min-width: 660px) {
+
+nav li {
+	display: inline;
+	margin-left: 0;
+}
+	
+nav ul {
+	margin: 0;
+	padding-left: 0.50%;
+	padding-right: 0.50%;
+	text-align: center;
+}
+
+nav li a {
+	display: inline-block;
+	padding: 0.7em;
+}
+
+aside {
+	display: block;
+	text-align: center;
+	font-style: italic;
+}
+
+#monthlyspecial {
+	display: flex;
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
+table {
+	border: 0.1em solid #000000;
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+th, td {
+	border: 0.1em solid #000000;
+	padding: 1em;
+}
+
+th {
+	background-color: #FE8EA4;
+	color: #FFFFFF;
+}
+
+caption {
+	font-size: 1.5em;
+	font-weight: bold;
+	padding-bottom: 0.5em;
+}
+
+form {
+	width: 80%;
+}
+
+footer {
+	clear: both;
+	margin-top: 0.1%;
+	padding: 1em;
+}
+
+.desktop {
+	display: inline;
+}
+}
+
+@media only screen and (min-width: 830px){
+	
+#wrapper {
+	border-radius: 1em;
+	width: 95%;
+}
+
+nav li a:link {
+	color: #fe6785;
+}
+
+nav li a:visited {
+	color: #B88C4B;
+}
+
+nav li a:hover {
+	color: #FFDB97;
+	font-style: italic;
+}
+
+.treats {
+	float: left;
+	margin: 0.5%;
+	padding: 0.5%;
+	text-align: center;
+	width: 31%;
+	background-color: #FFF;
+}
+
+figure img {
+	height: 10em;
+	width: 10em;
+	opacity: 0.7;
+}
+
+figure img:hover {
+	opacity: 1;
+}
+
+table {
+	width: 65%;
+}
+
+form {
+	display: block;
+	width: 80%;
+}
+
+label, input, select{
+	display: inline;
+	width: 10%;
+}
+
+textarea {
+	width: 68%
+}
+}
