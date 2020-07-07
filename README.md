@@ -1,5 +1,5 @@
 # Scoop's Ice Creamery
-A website I made for a fake ice cream shop using HTML and CSS.
+A website I made for a fake ice cream shop using HTML and CSS. Completed.
 
 It can be viewed here:
 
