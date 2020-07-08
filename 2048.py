@@ -53,7 +53,7 @@ class Game(tk.Frame):
         row = random.randint(0, 3)
         col = random.randint(0, 3)
         self.matrix[row][col] = 2
-        self.cells[row][col]["frame".configure(bg=c.CELL_COLORS[2])]
+        self.cells[row][col]["frame"].configure(bg=c.CELL_COLORS[2])
         self.cells[row][col]["number"].configure(
             bg=c.CELL_COLORS[2],
             fg=c.CELL_NUMBER_COLORS[2],
@@ -64,7 +64,7 @@ class Game(tk.Frame):
             row = random.randint(0, 3)
             col = random.randint(0, 3)
             self.matrix[row][col] = 2
-            self.cells[row][col]["frame".configure(bg=c.CELL_COLORS[2])]
+            self.cells[row][col]["frame"].configure(bg=c.CELL_COLORS[2])
             self.cells[row][col]["number"].configure(
                 bg=c.CELL_COLORS[2],
                 fg=c.CELL_NUMBER_COLORS[2],
@@ -147,6 +147,7 @@ class Game(tk.Frame):
         self.stack()
         self.add_new_tile()
         self.update_GUI()
+        self.game_over()
 
     def right(self, event):
         self.reverse()
@@ -156,8 +157,9 @@ class Game(tk.Frame):
         self.reverse()
         self.add_new_tile()
         self.update_GUI()
+        self.game_over()
 
-	def up(self, event):
+    def up(self, event):
         self.transpose()
         self.stack()
         self.combine()
@@ -165,8 +167,9 @@ class Game(tk.Frame):
         self.transpose()
         self.add_new_tile()
         self.update_GUI()
+        self.game_over()
 
-	def down(self, event):
+    def down(self, event):
         self.transpose()
         self.reverse()
         self.stack()
@@ -176,5 +179,56 @@ class Game(tk.Frame):
         self.transpose()
         self.add_new_tile()
         self.update_GUI()
+        self.game_over()
 
+    # Check if any moves are possible
+
+    def horizontal_move_exists(self):
+        for i in range(4):
+            for j in range(3):
+                if self.matrix[i][j] == self.matrix[i][j + 1]:
+                    return True
+        return False
+
+    def vertical_move_exists(self):
+        for i in range(3):
+            for j in range(4):
+                if self.matrix[i][j] == self.matrix[i + 1][j]:
+                    return True
+        return False
+
+    # Check if game is over (Win/Lose)
+    def game_over(self):
+        if any(2048 in row for row in self.matrix):
+            game_over_frame = tk.Frame(self.main_grid, borderwidth=2)
+            game_over_frame.place(relx=0.5, rely=0.5, anchor="center")
+            tk.Label(
+                game_over_frame,
+                text="You win",
+                bg=c.WINNER_BG,
+                fg=c.GAME_OVER_FONT_COLOR,
+                font=c.GAME_OVER_FONT,
+            ).pack()
+        elif (
+            not any(0 in row for row in self.matrix)
+            and not self.horizontal_move_exists
+            and not self.vertical_move_exists
+        ):
+            game_over_frame = tk.Frame(self.main_grid, borderwidth=2)
+            game_over_frame.place(relx=0.5, rely=0.5, anchor="center")
+            tk.Label(
+                game_over_frame,
+                text="Game over!",
+                bg=c.LOSER_BG,
+                fg=c.GAME_OVER_FONT_COLOR,
+                font=c.GAME_OVER_FONT,
+            ).pack()
+
+
+def main():
+    Game()
+
+
+if __name__ == "__main__":
+    main()
 
