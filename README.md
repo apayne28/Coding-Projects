@@ -1,3 +1,3 @@
-# Coding-Projects
-Random projects I've done to get better at coding.
+# 2048
+A 2048 game made in Python. In progress.
 
