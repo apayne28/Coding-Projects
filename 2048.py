@@ -76,23 +76,26 @@ class Game(tk.Frame):
             for j in range(4):
                 if self.matrix[i][j] != 0:
                     new_matrix[i][fill_position] = self.matrix[i][j]
-                    fill_position +=1
+                    fill_position += 1
         self.matrix = new_matrix
 
     def combine(self):
-        for in in range(4):
+        for i in range(4):
             for j in range(3):
-                if self.matrix[i][j] != 0 and self.matrix[i][j] == self.matrix[i][j+1]
+                if (
+                    self.matrix[i][j] != 0
+                    and self.matrix[i][j] == self.matrix[i][j + 1]
+                ):
                     self.matrix[i][j] *= 2
-                    self.matrix[i][j+1] = 0
+                    self.matrix[i][j + 1] = 0
                     self.score += self.matrix[i][j]
 
     def reverse(self):
         new_matrix = []
-        for in in range(4):
+        for i in range(4):
             new_matrix.append([])
             for j in range(4):
-                new_matrix[i].append(self.matrix[i][3-j])
+                new_matrix[i].append(self.matrix[i][3 - j])
         self.matrix = new_matrix
 
     def transpose(self):
@@ -110,8 +113,25 @@ class Game(tk.Frame):
         while self.matrix[row][col] != 0:
             row = random.randint(0, 3)
             col = random.randint(0, 3)
-            self.matrix[row][col] = random.choice([2,4])
+            self.matrix[row][col] = random.choice([2, 4])
 
     # Update the GUI to match the matrix
 
+    def update_GUI(self):
+        for i in range(4):
+            for j in range(4):
+                cell_value = self.matrix[i][j]
+                if cell_value == 0:
+                    self.cells[i][j]["frame"].configure(bg=c.EMPTY_CELL_COLOR)
+                    self.cells[i][j]["number"].configure(bg=c.EMPTY_CELL_COLOR, text="")
+                else:
+                    self.cells[i][j]["frame"].configure(bg=c.CELL_COLORS[cell_value])
+                    self.cells[i][j]["number"].configure(
+                        bg=c.CELL_COLORS[cell_value],
+                        fg=c.CELL_NUMBER_COLORS[cell_value],
+                        font=c.CELL_NUMBER_FONTS[cell_value],
+                        text=str(cell_value),
+                    )
+        self.score_label.configure(text=self.score)
+        self.update_idletasks()
 
