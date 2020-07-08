@@ -119,7 +119,7 @@ class Game(tk.Frame):
         while self.matrix[row][col] != 0:
             row = random.randint(0, 3)
             col = random.randint(0, 3)
-            self.matrix[row][col] = random.choice([2, 4])
+        self.matrix[row][col] = random.choice([2, 4])
 
     # Update the GUI to match the matrix
 
@@ -140,6 +140,8 @@ class Game(tk.Frame):
                     )
         self.score_label.configure(text=self.score)
         self.update_idletasks()
+
+    # Arrow-Press Functions
 
     def left(self, event):
         self.stack()
