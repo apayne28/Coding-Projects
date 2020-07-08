@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import tkinter as tk
 import colors as c
+import random
 
 
 class Game(tk.Frame):
@@ -12,7 +13,7 @@ class Game(tk.Frame):
         self.main_grid = tk.Frame(self, bg=c.GRID_COLOR, bd=3, width=600, height=600)
         self.main_grid.grid(pady=(100, 0))
         self.make_GUI()
-
+        self.start_game()
         self.mainloop()
 
     def make_GUI(self):
@@ -38,5 +39,79 @@ class Game(tk.Frame):
                 self.score_label = tk.Label(score_frame, text="0", font=c.SCORE_FONT)
                 self.score_label.grid(row=1)
 
+    def start_game(self):
+        # create matrix of zeroes
+        self.matrix = [[0] * 4 for _ in range(4)]
 
-Game()
+        # fill 2 random cells with 2s
+        row = random.randint(0, 3)
+        col = random.randint(0, 3)
+        self.matrix[row][col] = 2
+        self.cells[row][col]["frame".configure(bg=c.CELL_COLORS[2])]
+        self.cells[row][col]["number"].configure(
+            bg=c.CELL_COLORS[2],
+            fg=c.CELL_NUMBER_COLORS[2],
+            font=c.CELL_NUMBER_FONTS[2],
+            text="2",
+        )
+        while self.matrix[row][col] != 0:
+            row = random.randint(0, 3)
+            col = random.randint(0, 3)
+            self.matrix[row][col] = 2
+            self.cells[row][col]["frame".configure(bg=c.CELL_COLORS[2])]
+            self.cells[row][col]["number"].configure(
+                bg=c.CELL_COLORS[2],
+                fg=c.CELL_NUMBER_COLORS[2],
+                font=c.CELL_NUMBER_FONTS[2],
+                text="2",
+            )
+            self.score = 0
+
+    # Matrix Manipulation Functions
+
+    def stack(self):
+        new_matrix = [[0] * 4 for _ in range(4)]
+        for i in range(4):
+            fill_position = 0
+            for j in range(4):
+                if self.matrix[i][j] != 0:
+                    new_matrix[i][fill_position] = self.matrix[i][j]
+                    fill_position +=1
+        self.matrix = new_matrix
+
+    def combine(self):
+        for in in range(4):
+            for j in range(3):
+                if self.matrix[i][j] != 0 and self.matrix[i][j] == self.matrix[i][j+1]
+                    self.matrix[i][j] *= 2
+                    self.matrix[i][j+1] = 0
+                    self.score += self.matrix[i][j]
+
+    def reverse(self):
+        new_matrix = []
+        for in in range(4):
+            new_matrix.append([])
+            for j in range(4):
+                new_matrix[i].append(self.matrix[i][3-j])
+        self.matrix = new_matrix
+
+    def transpose(self):
+        new_matrix = [[0] * 4 for _ in range(4)]
+        for i in range(4):
+            for j in range(4):
+                new_matrix[i][j] = self.matrix[j][i]
+        self.matrix = new_matrix
+
+    # Add a new 2 or 4 tile randomly to an empty cell
+
+    def add_new_tile(self):
+        row = random.randint(0, 3)
+        col = random.randint(0, 3)
+        while self.matrix[row][col] != 0:
+            row = random.randint(0, 3)
+            col = random.randint(0, 3)
+            self.matrix[row][col] = random.choice([2,4])
+
+    # Update the GUI to match the matrix
+
+
