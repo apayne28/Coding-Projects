@@ -2,15 +2,15 @@ const express = require("express");
 const { graphqlHTTP } = require("express-graphql");
 const schema = require("./schema/schema");
 const mongoose = require("mongoose");
+var dotenv = require("dotenv");
 
 const app = express();
 
 //connect to mongodb database
+dotenv.config();
+var url = process.env.MONGOLAB_URI;
 mongoose
-  .connect(
-    "mongodb+srv://apayne28:Thiefshipping1@gqlnin.jkxhy.mongodb.net/<dbname>?retryWrites=true&w=majority",
-    { useNewUrlParser: true, useUnifiedTopology: true }
-  )
+  .connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("Connected to MongoDB Atlas"))
   .catch((err) => console.log("Error: ", err.message));
 
