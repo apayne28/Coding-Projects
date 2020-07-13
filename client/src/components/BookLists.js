@@ -1,6 +1,6 @@
 import React from "react";
 import { gql } from "apollo-boost";
-import { graphql } from "react-apollo";
+import { graphql, Query } from "react-apollo";
 
 const getBooksQuery = gql`
   {
@@ -11,12 +11,22 @@ const getBooksQuery = gql`
   }
 `;
 
+const displayBooks = () => (
+  <Query query={getBooksQuery}>
+    {({ loading, error, data }) => {
+      if (loading) {
+        return <p>Loading Books...</p>;
+      } else {
+        return data.books.map(({ id, name }) => <li key={id}>{name}</li>);
+      }
+    }}
+  </Query>
+);
+
 function BookList() {
   return (
     <div id="main">
-      <ul id="book-list">
-        <li>Book name</li>
-      </ul>
+      <ul id="book-list">{displayBooks()}</ul>
     </div>
   );
 }
