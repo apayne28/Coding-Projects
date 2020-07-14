@@ -8,6 +8,9 @@ function BookList() {
       {({ loading, error, data }) => {
         if (loading) {
           return <p>Loading Books...</p>;
+        }
+        if (error) {
+          return <p>Error Loading Books...</p>;
         } else {
           return data.books.map(({ id, name }) => <li key={id}>{name}</li>);
         }
