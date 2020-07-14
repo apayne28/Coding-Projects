@@ -11,19 +11,18 @@ const getBooksQuery = gql`
   }
 `;
 
-const displayBooks = () => (
-  <Query query={getBooksQuery}>
-    {({ loading, error, data }) => {
-      if (loading) {
-        return <p>Loading Books...</p>;
-      } else {
-        return data.books.map(({ id, name }) => <li key={id}>{name}</li>);
-      }
-    }}
-  </Query>
-);
-
 function BookList() {
+  const displayBooks = () => (
+    <Query query={getBooksQuery}>
+      {({ loading, error, data }) => {
+        if (loading) {
+          return <p>Loading Books...</p>;
+        } else {
+          return data.books.map(({ id, name }) => <li key={id}>{name}</li>);
+        }
+      }}
+    </Query>
+  );
   return (
     <div id="main">
       <ul id="book-list">{displayBooks()}</ul>
