@@ -58,7 +58,7 @@ const AddBooks = () => {
         </select>
       </div>
 
-      <button>Submit</button>
+      <button>+</button>
     </form>
   );
 };
