@@ -4,4 +4,4 @@ The TweetMe2 project I go back to from time to time.
 
 The tutorial can be found [here](https://www.youtube.com/watch?v=f1R_bykXHGE)
 
-###### Current Progress: Step 27/110
+###### Current Progress: Step 28/110
