@@ -1,15 +1,5 @@
-# Coding-Projects
+# ReactJS Tutorial
 
-This repo contains random projects I've done to get better at coding.
+A tutorial I followed to practice ReactJS.
 
-### Completed Projects
-
-1. [Scoop's Ice Creamery](https://github.com/apayne28/Coding-Projects/tree/AP_ScoopsIceCreamery)
-2. [PokeApp](https://github.com/apayne28/Coding-Projects/tree/AP_PokeApp)
-3. [GraphQLTutorialWork](https://github.com/apayne28/Coding-Projects/tree/AP_GraphQLTutorialWork)
-4. [Typescript+React Quiz App](https://github.com/apayne28/Coding-Projects/tree/AP_TSQuizApp)
-
-### In-Progress Projects
-
-1. [TweetMe2](https://github.com/apayne28/Coding-Projects/tree/AP_TweetMe2)
-2. [2048](https://github.com/apayne28/Coding-Projects/tree/AP_2048)
+It can be found [here](https://www.youtube.com/playlist?list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3)
