@@ -1,1 +1,4 @@
-console.log("Hello World!");
+function reducer(store, action) {
+  const updated = { ...store };
+  //updated.products = ???
+}
