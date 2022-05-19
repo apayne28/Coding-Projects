@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/react-anime/static/css/main.f96b674d.css",
+    "main.js": "/react-anime/static/js/main.2d11e5da.js",
+    "static/media/berserk.png": "/react-anime/static/media/berserk.635ab8ae9de148be8960.png",
+    "static/media/aot.jpeg": "/react-anime/static/media/aot.220f3ed89ea4054e0c9b.jpeg",
+    "static/media/deathnote3.png": "/react-anime/static/media/deathnote3.4a92579960de70729f2e.png",
+    "static/media/naruto.jpg": "/react-anime/static/media/naruto.c2b038235fcfe02d4d30.jpg",
+    "static/media/berserk.jpg": "/react-anime/static/media/berserk.facd6c84e58d859743cc.jpg",
+    "static/media/anime.jpeg": "/react-anime/static/media/anime.2c1f78da0f4d68096fd3.jpeg",
+    "static/media/bnha2.webp": "/react-anime/static/media/bnha2.da9aa6c5dcd1a7a8d857.webp",
+    "static/media/opm.jpg": "/react-anime/static/media/opm.540b0045f22e4341a9a4.jpg",
+    "static/media/snk.jpg": "/react-anime/static/media/snk.8f6156871288820b9ea6.jpg",
+    "static/media/opp.png": "/react-anime/static/media/opp.18bf6fba6e0389aecbb7.png",
+    "static/media/deathnote4.jpg": "/react-anime/static/media/deathnote4.462e27276fe943db6f39.jpg",
+    "static/media/sg.jpg": "/react-anime/static/media/sg.8c16a78ce8423c324ba2.jpg",
+    "static/media/pikafight.gif": "/react-anime/static/media/pikafight.604ec30c4f5a238f2109.gif",
+    "static/media/ZeroTwoSpin.gif": "/react-anime/static/media/ZeroTwoSpin.41ccbb38f5ff8f39af5f.gif",
+    "static/media/cm.jpg": "/react-anime/static/media/cm.bd102d36ba39f22bea0e.jpg",
+    "static/media/op.jpg": "/react-anime/static/media/op.4503605e90e75c0cb3f0.jpg",
+    "static/media/berserk2.jpeg": "/react-anime/static/media/berserk2.903112d7d73e9afbbe24.jpeg",
+    "static/media/fmab.webp": "/react-anime/static/media/fmab.94bf3b1f250637a8bada.webp",
+    "static/media/bnha.jpeg": "/react-anime/static/media/bnha.3fb80814ae4d3553423f.jpeg",
+    "static/media/hxh.webp": "/react-anime/static/media/hxh.8877c0f8b555fd72b580.webp",
+    "static/media/deathnote.webp": "/react-anime/static/media/deathnote.16d6a038032dc6a80ce6.webp",
+    "static/media/sorrynothing.png": "/react-anime/static/media/sorrynothing.ca9298903717eadcd10a.png",
+    "static/media/logo2.png": "/react-anime/static/media/logo2.4e36955ea7eb423203e7.png",
+    "index.html": "/react-anime/index.html",
+    "main.f96b674d.css.map": "/react-anime/static/css/main.f96b674d.css.map",
+    "main.2d11e5da.js.map": "/react-anime/static/js/main.2d11e5da.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f96b674d.css",
+    "static/js/main.2d11e5da.js"
+  ]
+}
