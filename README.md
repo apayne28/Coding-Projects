@@ -1,4 +1,4 @@
 # Scoop's Ice Creamery
-A website I made for a fake ice cream shop using HTML and CSS. Completed.
+A website I made for a fake ice cream shop using HTML and CSS for my CIS-238 class. Completed.
 
-It can be viewed [here](https://htmlpreview.github.io/?https://github.com/apayne28/Coding-Projects/blob/AP_ScoopsIceCreamery/index.html)
+
